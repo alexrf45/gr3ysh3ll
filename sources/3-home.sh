@@ -10,10 +10,16 @@ mkdir -p $HOME/.config && mkdir -p $HOME/.zsh &&
   cp -r /home/kali/resources/zsh/history $HOME/.history &&
   cp -r /home/kali/resources/mozilla $HOME/.mozilla
 
-wget -q "https://github.com/junegunn/fzf/releases/download/v0.56.3/fzf-0.56.3-linux_amd64.tar.gz" -O fzf.tar.gz &&
+wget -q "https://github.com/junegunn/fzf/releases/download/v0.56.3/fzf-0.60.3-linux_amd64.tar.gz" -O fzf.tar.gz &&
   tar xzf fzf.tar.gz && chmod +x fzf && mv fzf $HOME/.local/bin/.
 
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
+git clone https://github.com/LazyVim/starter $HOME/.config/nvim
+
+rm -rf ~/.config/nvim/.git
+
+cp -r plugins $HOME/.config/nvim/lua/.
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 

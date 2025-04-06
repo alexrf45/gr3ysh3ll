@@ -1,30 +1,54 @@
-![Logo](https://ka-tet.s3.amazonaws.com/logo_long.png)                                                                                                                                           
-![GitHub Release](https://img.shields.io/github/v/release/alexrf45/aegis?display_name=tag&style=plastic)
-  ![Logo](https://img.shields.io/docker/image-size/fonalex45/aegis) ![Logo](https://img.shields.io/docker/pulls/fonalex45/aegis)       
+# gr3ysh3ll 
+                                                                                                                                           
+![GitHub Release](https://img.shields.io/github/v/release/alexrf45/gr3ysh3ll?display_name=tag&style=plastic)
+  ![Logo](https://img.shields.io/docker/image-size/fonalex45/gr3ysh3ll) ![Logo](https://img.shields.io/docker/pulls/fonalex45/aegis)       
 
-Aegis is a docker image designed for any engagement. Gone are the days of spinning up an entire Kali virtual machine or installing on bare metal. This image offers a flexible, repeatable environment for penetration testers, security researchers and analysts alike.
 
 
-## Acknowledgements
+> **gr3ysh3ll** — a disposable, flexible, and repeatable container environment for security researchers, analysts, and enthusiasts.  
+> **Launch anywhere. Burn after use. Repeat.**
 
- I pulled alot of inspiration from this awesome project and can only hope my project is as awesome as this one is.
- 
-- [Exegol - Fully featured and community-driven hacking environment](https://github.com/ThePorgs/Exegol)
+---
 
-## Features
+## 🚀 What is gr3ysh3ll?
 
-- Bash script executable
-- Command history logging via `script`
+**gr3ysh3ll** is a containerized security research environment designed for offensive and defensive operations. Whether you're doing recon, exploitation, analysis, or tool testing, `gr3ysh3ll` gives you:
+
+- 🐳 **Containerized environments** — consistent environments every time 
+- 🔁 **Burnable instances** — throwaway containers that keep the host OS clean
+- ☁️ **Portable deployments** — run it locally, in the cloud or kubernetes
+
+---
+
+## 📦 Features
+
+- Lightweight base image with common pentesting utilities
 - Persistant containers, volumes and workspaces
-- Customizable resources and tooling, config files are located in the `resources/` & `sources/` directories
-- Non-root container w/ sudo
-- Tmux inside the container (my favorite feature)
+- ZSH-powered shell with rich prompt
+- Pre-configured Tmux configuration
 - GUI apps such as burpsuite and firefox
+- Bash script executable (Docker compose in the works)
+- Cloud-ready: works on EC2, GCP, or K8s
 
+---
 
-### Custom aliases included:
+## 🛠️ Getting Started
+
+### 🔧 Requirements
+
+- Docker or Podman
+- (Optional) Docker Compose
+- Bash or ZSH
+
+### 📥 Pull the Image
+
+```bash
+docker pull fonalex45/gr3ysh3ll:latest
 
 ```
+### Custom aliases included:
+
+```bash
 alias cme='nxc'
 alias port-scan='sudo nmap -sC -sV -p- $IP > scan.txt'
 alias udp-scan='sudo nmap -sU --top-ports 10 $IP -v > udp.scan.txt'
@@ -43,38 +67,11 @@ alias proxy='proxychains'
 alias serve='sudo python3 -m http.server 80'
 ```
 
-## Installation
-
-
-**The script has one dependency: gum. this can be installed via your distro's package manager**
-
-1. Clone the repo:
-`git clone https://github.com/alexrf45/aegis.git && cd aegis`
-
-2. Run the following commands to make the script ready for use:
-
-```bash
-$ cp aegis $HOME/.local/bin/. \
-&& chmod +x $HOME/.local/bin/aegis \
-&& source $HOME/.bashrc
-```
-## Usage/Examples
-
-```bash
-aegis start - start a container
-aegis stop - stop a container
-aegis enter- enter running container
-aegis destory - destory a container
-aegis backup - backup shared volume
-aegis pull - update to latest image (dev, latest)
-aegis help - view this help menu
-```
 
 ## Command history
-- Useful commands are already built into the container history. Simple type `CTRL+r' to pull up the fzf window where you can filter for the needed command. fzf makes navigating commands and files a breeze.
+- Useful commands are already built into the container history. Simple type `CTRL+r' to pull up the fzf window and filter for commands. fzf makes navigating commands and files a breeze.
 
 
-TODO:
-- Python wrapper (FUTURE)
-- fzf usage (only works in zsh)
-- miniserve quick web server w/ TLS function (done)
+### 🤘 Contributing
+
+Have an idea, bug, or tool request? Open an issue or submit a PR.
