@@ -1,9 +1,7 @@
-# gr3ysh3ll 
-                                                                                                                                           
+# gr3ysh3ll
+
 ![GitHub Release](https://img.shields.io/github/v/release/alexrf45/gr3ysh3ll?display_name=tag&style=plastic)
-  ![Logo](https://img.shields.io/docker/image-size/fonalex45/gr3ysh3ll) ![Logo](https://img.shields.io/docker/pulls/fonalex45/aegis)       
-
-
+  ![Logo](https://img.shields.io/docker/image-size/fonalex45/gr3ysh3ll) ![Logo](https://img.shields.io/docker/pulls/fonalex45/gr3ysh3ll)
 
 > **gr3ysh3ll** — a disposable, flexible, and repeatable container environment for security researchers, analysts, and enthusiasts.  
 > **Launch anywhere. Burn after use. Repeat.**
@@ -14,7 +12,7 @@
 
 **gr3ysh3ll** is a containerized security research environment designed for offensive and defensive operations. Whether you're doing recon, exploitation, analysis, or tool testing, `gr3ysh3ll` gives you:
 
-- 🐳 **Containerized environments** — consistent environments every time 
+- 🐳 **Containerized environments** — consistent environments every time
 - 🔁 **Burnable instances** — throwaway containers that keep the host OS clean
 - ☁️ **Portable deployments** — run it locally, in the cloud or kubernetes
 
@@ -46,7 +44,8 @@
 docker pull fonalex45/gr3ysh3ll:latest
 
 ```
-### Custom aliases included:
+
+### Custom aliases included
 
 ```bash
 alias cme='nxc'
@@ -67,10 +66,9 @@ alias proxy='proxychains'
 alias serve='sudo python3 -m http.server 80'
 ```
 
-
 ## Command history
-- Useful commands are already built into the container history. Simple type `CTRL+r' to pull up the fzf window and filter for commands. fzf makes navigating commands and files a breeze.
 
+- Useful commands are already built into the container history. Simple type `CTRL+r' to pull up the fzf window and filter for commands. fzf makes navigating commands and files a breeze.
 
 ### 🤘 Contributing
 
