@@ -1,9 +1,9 @@
 # latest kali base image
 FROM kalilinux/kali-rolling:latest
 
-LABEL "project"="aegis"
+LABEL "project"="gr3ysh3ll"
 LABEL "author"="fr3d"
-LABEL "version"="v1.5.0"
+LABEL "version"="v1.6.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ="America/New_York"

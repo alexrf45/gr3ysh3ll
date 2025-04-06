@@ -11,6 +11,13 @@ extract() {
     *.tgz) tar xzf $1 ;;
     *.zip) unzip $1 ;;
     *.Z) uncompress $1 ;;
+    *.7z) uncompress $1 ;;
+    *.apk) uncompress $1 ;;
+    *.bz2) uncompress $1 ;;
+    *.tar.gz) uncompress $1 ;;
+    *.tar.lz) uncompress $1 ;;
+    *.war) uncompress $1 ;;
+    *.xz) xz -d -v $1 ;;
     *) echo "'$1' cannot be extracted via extract()" ;;
     esac
   else
@@ -19,15 +26,9 @@ extract() {
 }
 
 up() {
-  LIMIT=$1
-  P=$PWD
-
-  echo "Moving $LIMIT directories up from $P"
-
-  for ((i = 1; i <= LIMIT; i++)); do
-    P=$P/..
+  for i in $(seq 1 $1); do
+    cd ../
   done
-  cd $P
 }
 
 virtual_env() {
@@ -77,4 +78,14 @@ encrypt_age() {
 decrypt_age() {
   age -d \
     $1 >$2
+}
+
+mkcd() {
+  if [ ! -n "$1" ]; then
+    echo "Enter a directory name"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+  else
+    mkdir $1 && cd $1
+  fi
 }
