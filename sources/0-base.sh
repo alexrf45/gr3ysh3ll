@@ -10,7 +10,7 @@ base() {
     rpcbind nfs-common feh cmake \
     ntp ntpdate bash-completion zsh bat mkcert \
     dbus-x11 x11-utils openssh-server supervisor x11vnc xvfb autocutsel \
-    novnc upx-ucl aria2
+    novnc upx-ucl aria2 neovim fzf
 }
 
 network() {
