@@ -44,7 +44,7 @@ USER kali
 
 RUN sudo chsh $USER -s /usr/bin/zsh
 
-CMD zsh
+CMD ["/usr/bin/zsh"]
 
 
 
