@@ -42,9 +42,9 @@ RUN sudo rm -rf /tmp/sources && sudo rm -rf /home/kali/resources
 
 USER kali
 
-RUN sudo chsh $USER -s /bin/zsh
+RUN sudo chsh $USER -s /usr/bin/zsh
 
-RUN zsh
+CMD zsh
 
 
 
