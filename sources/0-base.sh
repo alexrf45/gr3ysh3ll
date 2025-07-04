@@ -56,10 +56,10 @@ network
 active_directory
 osint_tools
 
-mkdir -p $HOME/.local/bin
+mkdir -p "$HOME/.local/bin"
 
-mkdir -p $HOME/.logs
+mkdir -p "$HOME/.logs"
 
-mkdir -p $HOME/.tools
+mkdir -p "$HOME/.tools"
 
-mkdir -p $HOME/.proxychains
+mkdir -p "$HOME/.proxychains"
