@@ -8,7 +8,7 @@ base() {
     djvulibre-bin python3-pip openssh-client openssl traceroute python3-virtualenv libpcap-dev \
     jq xpdf pipx man-db exploitdb \
     rpcbind nfs-common feh cmake \
-    ntp ntpdate bash-completion zsh bat mkcert \
+    ntpsec ntpsec-ntpdate bash-completion zsh bat mkcert \
     dbus-x11 x11-utils openssh-server supervisor x11vnc xvfb autocutsel \
     novnc upx-ucl aria2 neovim fzf
 }

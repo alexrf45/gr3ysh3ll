@@ -1,16 +1,9 @@
 #!/bin/bash
 
 # gr3ysh3ll is a simple bash wrapper with no dependencies outside of a standard bash shell
-#
 
-RED="31"
-BOLDRED="\e[1;${RED}m"
-GREEN="32"
 BOLDGREEN="\e[1;${GREEN}m"
-YELLOW="37"
 BOLDYELLOW="\e[1;${YELLOW}m"
-C_BLUEVIOLET="\033[38;5;57m"
-ENDCOLOR="\e[0m"
 
 image=$3
 project=$2
